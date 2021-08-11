@@ -17,9 +17,12 @@ void distribute_year_vec(std::vector<float> &year_vec,std::vector<float> &fortni
     fortnight_vec[i*26] = year_vec[i];
   }
 
-
-std::partial_sum(fortnight_vec.begin(), fortnight_vec.end(),);
-
+  int j; 
+  int max_j= fortnight_vec.size();
+  
+  for(i = 1; i <= max_j; i++ ){
+    fortnight_vec[i] = fortnight_vec[i] + fortnight_vec[i-1];
+  }
 
 };
 
