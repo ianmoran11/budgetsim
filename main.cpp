@@ -21,17 +21,17 @@ int main() {
 
   distribute_year_vec(year_vec, fortnight_vec);
 
- int i;
-   std::cout << "Year vec ---------------------------------------\n" ; 
- for(i = 1; i <= years; i++){
-   printf("%10.3f \n",year_vec[i]); 
+  account accountIncome;
 
- }
+  account portfolio[3];
 
-   std::cout << "fortnight_vec vec ---------------------------------------\n" ; 
- for(i = 1; i <= years; i++){
-   printf("%10.3f \n",fortnight_vec[i]); 
- }
+ account portfolio1;
+
+ portfolio[1] =  portfolio1;
+ portfolio[2] =  portfolio1;
+ portfolio[3] =  portfolio1;
+
+
 
 
 }
