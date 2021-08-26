@@ -21,7 +21,7 @@ void distribute_year_vec(std::vector<float> &year_vec,std::vector<float> &fortni
   int max_j= fortnight_vec.size();
   
   for(i = 1; i <= max_j; i++ ){
-    fortnight_vec[i] = fortnight_vec[i] + fortnight_vec[i-1];
+    fortnight_vec[i] = fortnight_vec[i] * fortnight_vec[i-1];
   }
 
 };

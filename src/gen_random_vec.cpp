@@ -10,11 +10,12 @@
 
 using namespace std;
 
-void gen_random_vec(vector<float> &x)
+void gen_random_vec(vector<float> &x, float mu , float sigma )
 {
   int N=(x).size();
-  uniform_real_distribution<float> unif(0.0,1.0);
-  mt19937 re(time(NULL));
-  auto generator = std::bind(unif,re);
+  normal_distribution<float> unif(mu,sigma);
+  std::random_device rd;
+  mt19937 gen(rd());
+  auto generator = std::bind(unif, std::ref(gen));
   generate_n((x).begin(),N,generator);
 }
