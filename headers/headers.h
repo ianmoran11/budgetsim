@@ -29,14 +29,13 @@ public:
     goal = goal_arg ;
     initial_income = initial_income_arg ;
 
-    std::vector<float> balance_vec = init_random_vec(60,0,0);
-    balance_vec[0] =balance_arg;
-
     interest_vec = init_random_vec(60, 0.02,0.02);
     income_growth_vec = init_random_vec(60, 1.02,0.02);
     income_vec = apply_rate_to_vec(income_growth_vec,initial_income);
 
-     printf("%9.3f\t",balance_vec[0]);
+
+    balance_vec = init_random_vec(60,0,0);
+    balance_vec[0] = balance_arg;
   }
 
 };

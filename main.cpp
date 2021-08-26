@@ -36,11 +36,10 @@
  
    int i ;
    for(i = 0; i <= 150; i++){
-    //  printf("%9.3f\t",account1.balance_vec[i]);
-    //  printf("%9.3f\t",account2.balance_vec[i]);
-    //  printf("%9.3f\n",account3.balance_vec[i]);
+      printf("%9.3f\t",account1.balance_vec[i]);
+      printf("%9.3f\t",account2.balance_vec[i]);
+      printf("%9.3f\n",account3.balance_vec[i]);
       apply_income_to_blance(account1, i);
-
 
       transfer_between_accounts(account1, account2, i);
       transfer_between_accounts(account2, account3, i);
@@ -48,6 +47,8 @@
       move_balance_forward(account1, i);
       move_balance_forward(account2, i);
       move_balance_forward(account3, i);
+
+
    }
 
 //}
