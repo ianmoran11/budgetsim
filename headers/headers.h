@@ -11,13 +11,12 @@ class account
 private:
 public:
 
-   int years ; 
-   float goal ;
-   float initial_income ; 
-   
-   int periods =years * 26 ;  
+   int years = 0; 
+   float goal = 0 ;
+   float initial_income = 0; 
+   int periods =years * 26;  
 
-   float balance  ;
+   float balance  = 0 ;
    std::vector<float> balance_vec = init_random_vec(60,0,0);
    std::vector<float> interest_vec = init_random_vec(60, 0.02,0.02);
    std::vector<float> income_growth_vec = init_random_vec(60,1.02,0.02);
